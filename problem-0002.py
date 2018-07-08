@@ -11,16 +11,18 @@ By considering the terms in the Fibonacci sequence whose values do not
 exceed four million, find the sum of the even-valued terms.
 """
 
-total = 0
-a = 1
-b = 2
+if __name__ == '__main__':
 
-while b <= 4000000:
+    total = 0
+    a = 1
+    b = 2
 
-    # Every variable b in this loop will be even
-    total += b
-    c = a + b
-    a = b + c
-    b = a + c
+    while b <= 4000000:
 
-print(total)
+        # Every variable b in this loop will be even
+        total += b
+        c = a + b
+        a = b + c
+        b = a + c
+
+    print(total)

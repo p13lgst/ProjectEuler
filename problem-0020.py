@@ -1,20 +1,17 @@
-def main():
-	target = 100
-	print getDigitSum(getFactorial(target))
-	print getFactorial(100)
+def get_sum_of_digits(n):
+    total = 0
+    for i in str(n):
+        total += int(i)
+    return total
 
-def getDigitSum(n):
-	total = 0
-	for i in str(n):
-		total+=int(i)
-		print i, total
-	return total
 
-def getFactorial(n):
-	factorial = 1
-	for i in range(2,n+1):
-		factorial*=i
-	return factorial
+def factorial(n):
+    result = 1
+    for i in range(2, n+1):
+        result *= i
+    return result
+
 
 if __name__ == '__main__':
-	main()
+    target = 100
+    print(get_sum_of_digits(factorial(target)))
