@@ -1,2 +1,2 @@
 # ProjectEuler
-My ProjectEuler.net solutions. 
+My https://ProjectEuler.net problems solutions using python.
