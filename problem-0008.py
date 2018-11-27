@@ -18,19 +18,18 @@ def multiply(digits):
     return total
 
 
-if __name__ == "__main__":
-    file = open("8.txt")
-    number = "".join(i for i in file.read().split())
-    file.close()
+file = open("8.txt")
+number = "".join(i for i in file.read().split())
+file.close()
 
-    length = 13
-    greatest = 0
-    for i in range(1000):
-        adjacent_digits = number[i:i+length]
-        if "0" in adjacent_digits:
-            continue
-        product = multiply(adjacent_digits)
-        if product > greatest:
-            greatest = product
+length = 13
+greatest = 0
+for i in range(1000):
+    adjacent_digits = number[i:i+length]
+    if "0" in adjacent_digits:
+        continue
+    product = multiply(adjacent_digits)
+    if product > greatest:
+        greatest = product
 
-    print(greatest)
+print(greatest)

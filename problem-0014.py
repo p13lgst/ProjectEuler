@@ -20,17 +20,17 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 """
 
 # Store the sequences already found
-seqlegths = {}
+seq_lengths = {}
 
 
 # Get the sequence of the lengths
-def getSequenceLength(num):
+def get_sequence_length(num):
     count = 1
     while num > 1:
 
         # Break the loop if get to an sequence already computed.
-        if num in seqlegths.keys():
-            count += seqlegths[num] - 1
+        if num in seq_lengths.keys():
+            count += seq_lengths[num] - 1
             break
         if num % 2 == 0:
             num /= 2
@@ -40,14 +40,13 @@ def getSequenceLength(num):
     return count
 
 
-if __name__ == '__main__':
-    i = 1
-    largest = [0, 0]
-    for i in range(1000000):
-        length = getSequenceLength(i)
-        seqlegths[i] = length
+i = 1
+largest = [0, 0]
+for i in range(1000000):
+    length = get_sequence_length(i)
+    seq_lengths[i] = length
 
-        # If the length found is greater than the next, change the largest
-        if length > largest[1]:
-            largest = [i, length]
-    print(largest[0])
+    # If the length found is greater than the next, change the largest
+    if length > largest[1]:
+        largest = [i, length]
+print(largest[0])

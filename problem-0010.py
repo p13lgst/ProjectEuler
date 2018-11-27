@@ -24,6 +24,5 @@ def sum_of_primes_below(n):
     return psum
 
 
-if __name__ == "__main__":
-    target = 2000000
-    print(sum_of_primes_below(target))
+target = 2000000
+print(sum_of_primes_below(target))

@@ -28,7 +28,7 @@ num = 2
 while True:
     if is_prime(num):
         primes.append(num)
-        counter+=1
+        counter += 1
         if counter == 10001:
             break
     num += 1

@@ -47,12 +47,11 @@ def prime_factors(n):
     return factors
 
 
-if __name__ == '__main__':
-    i = 1
-    current_triangle = 1
-    while True:
-        if count_divisors(current_triangle) > 500:
-            break
-        i += 1
-        current_triangle += i
-    print(current_triangle)
+i = 1
+current_triangle = 1
+while True:
+    if count_divisors(current_triangle) > 500:
+        break
+    i += 1
+    current_triangle += i
+print(current_triangle)

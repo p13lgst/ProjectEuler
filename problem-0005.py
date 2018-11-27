@@ -19,9 +19,8 @@ def lcm(a, b):
     return a*b//gcd(a, b)
 
 
-if __name__ == "__main__":
-    lcm_1_to_20 = 1
-    for i in range(2, 21):
-        lcm_1_to_20 = lcm(i, lcm_1_to_20)
+lcm_1_to_20 = 1
+for i in range(2, 21):
+    lcm_1_to_20 = lcm(i, lcm_1_to_20)
 
-    print(lcm_1_to_20)
+print(lcm_1_to_20)

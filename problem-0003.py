@@ -26,14 +26,12 @@ def get_sieve(size):
     return sieve
 
 
-if __name__ == '__main__':
+num = 600851475143
+floored_sqrt_num = int(num ** 0.5)
 
-    num = 600851475143
-    floored_sqrt_num = int(num ** 0.5)
+sieve = get_sieve(floored_sqrt_num)
 
-    sieve = get_sieve(floored_sqrt_num)
-
-    for i in range(floored_sqrt_num, 1, -1):
-        if sieve[i] and num % i == 0:
-            print(i)
-            break
+for i in range(floored_sqrt_num, 1, -1):
+    if sieve[i] and num % i == 0:
+        print(i)
+        break
